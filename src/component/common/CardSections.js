@@ -23,6 +23,9 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     flexDirection: 'row',
     borderColor: "#E8E8E8",
-    position:"relative"
+    position:"relative",
+    
+    borderWidth: 2,
+    width: 340
   }
 });

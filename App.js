@@ -10,12 +10,12 @@ import reducers from "./src/reducers";
 import LoginForm from './src/component/LoginForm';
 import Home from "./src/component/Home"
 const firebaseConfig = {
-  apiKey: 'AIzaSyAvvxFJhxMlpwitH6PjsT-yxMXfC4dtn7Q',
-  authDomain: 'authentication-b973f.firebaseapp.com',
-  databaseURL: 'https://authentication-b973f.firebaseio.com',
-  projectId: 'authentication-b973f',
-  storageBucket: 'authentication-b973f.appspot.com',
-  messagingSenderId: '499339976209'
+    apiKey: "AIzaSyCqN5taKLdcXMgN7iVLxTvOTDhYbiCDFGc",
+    authDomain: "bankemploye-36aac.firebaseapp.com",
+    databaseURL: "https://bankemploye-36aac.firebaseio.com",
+    projectId: "bankemploye-36aac",
+    storageBucket: "bankemploye-36aac.appspot.com",
+    messagingSenderId: "850517733847"
 };
 firebase.initializeApp(firebaseConfig);
 

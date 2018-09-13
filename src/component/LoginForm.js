@@ -12,8 +12,7 @@ import {
 import { connect } from "react-redux";
 import { emailChanged, passwordChanged, loginUser } from "../actions"
 
-import Icons from 'react-native-vector-icons/Ionicons';
-
+import Icons from 'react-native-vector-icons/FontAwesome';
 
 class LoginForm extends React.Component {
 
@@ -98,7 +97,7 @@ renderError(){
           <Text style={styles.loginText}>L O G I N</Text>
         </View>
         <View>
-          <Icons name="ios-person-outline" size={28}
+        <Icons name="envelope" size={27}
             style={styles.InputIcons}
           />
           <TextInput style={styles.textInput} 
@@ -110,7 +109,7 @@ renderError(){
           />
         </View>
         <View>
-          <Icons name="ios-lock" size={28}
+          <Icons name="lock" size={27}
             style={styles.InputIcons}
           />
           <TextInput style={styles.textInput} 
@@ -176,7 +175,7 @@ const styles = StyleSheet.create({
   InputIcons:{
     position:"absolute",
     marginTop: 21,
-    left:22
+    left:21
   },
   textInput:{
       width:340,
@@ -186,7 +185,7 @@ const styles = StyleSheet.create({
       borderRadius: 30,
       borderColor:"black", 
       borderWidth: 2,
-      paddingLeft: 50,
+      paddingLeft: 52,
   },
   button:{
     width:340,

@@ -1,21 +1,59 @@
+import _ from "lodash";
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { ListView } from 'react-native';
 import { createStackNavigator } from "react-navigation";
-
+import { connect } from "react-redux";
+import { employeesFetch } from "../actions"
+import ListItem from "./ListItem"
 class Home extends Component {
+
+  componentWillMount() {
+    this.props.employeesFetch();
+
+    this.createDataSource(this.props);
+   
+};
+
+componentWillReceiveProps(nextProps) {
+  //nextProps are the nexrt set of pops that will render with this.props i.e with previous props or old props
+  this.createDataSource(nextProps);
+}
+
+
+createDataSource({ employees }) {
+  const ds = new ListView.DataSource({
+    rowHasChanged : ( r1, r2 )  => r1 !== r2
+  });
+
+  this.dataSource = ds.cloneWithRows(employees)
+};
+
   navigationOptions = {
     header:null,
     
 }
 
+renderRow(employee){
+  return <ListItem employee={ employee }/>
+}
 
   render() {
+    console.log(this.props)
     return (
-      <View>
-        <Text> textInComponent </Text>
-      </View>
+      <ListView
+        enableEmptySections
+        dataSource={this.dataSource}
+        renderRow={this.renderRow}
+      />
     );
   }
 }
 
-export default Home;
+const mapStateToProps = state =>{
+  const employees = _.map(state.employees, (val,uid) => {
+    return { ...val, uid };
+  });
+  return { employees };
+};
+
+export default connect(mapStateToProps,{ employeesFetch })(Home);

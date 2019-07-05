@@ -10,12 +10,7 @@ import reducers from "./src/reducers";
 import LoginForm from './src/component/LoginForm';
 import Home from "./src/component/Home"
 const firebaseConfig = {
-    apiKey: "AIzaSyCqN5taKLdcXMgN7iVLxTvOTDhYbiCDFGc",
-    authDomain: "bankemploye-36aac.firebaseapp.com",
-    databaseURL: "https://bankemploye-36aac.firebaseio.com",
-    projectId: "bankemploye-36aac",
-    storageBucket: "bankemploye-36aac.appspot.com",
-    messagingSenderId: "850517733847"
+    
 };
 firebase.initializeApp(firebaseConfig);
 

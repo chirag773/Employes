@@ -9,7 +9,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "expo": "^30.0.1",
+    "expo": "^46.0.14",
     "firebase": "^5.5.0",
     "lodash": "^4.17.11",
     "react": "16.5.1",
